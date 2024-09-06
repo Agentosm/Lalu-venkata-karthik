@@ -1,1 +1,7 @@
+Apache server:
 
+1. sudo systemctl start apache2
+2. sudo systemctl stop apache2
+3. sudo systemctl restart apache2
+4. enable systemctl apache2
+5. sudo nano /etc/apache2/apache2.conf (apache config file to change port and other things)
