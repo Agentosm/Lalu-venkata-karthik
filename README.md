@@ -2,9 +2,9 @@
 
 # Host Discovery
 
-nmap -sP -PE -PP -PA -PU target_ip_address (or nmap -sn -PE -sM -sO target_ip_address): Perform a ping scan (ICMP) to identify live hosts, followed by TCP SYN, UDP, and ICMP echo requests.
-nmap -n -sL -iL target_ip_address: List hosts in a file (-iL) or specify a network (-n) and perform a scan.
-Port Scanning
+ 1. nmap -sP -PE -PP -PA -PU target_ip_address (or nmap -sn -PE -sM -sO target_ip_address): Perform a ping scan (ICMP) to identify live hosts, followed by TCP SYN, UDP, and ICMP echo requests.
+2. nmap -n -sL -iL target_ip_address: List hosts in a file (-iL) or specify a network (-n) and perform a scan.
+# Port Scanning
 
 nmap -p 1-1000 target_ip_address: Scan ports 1 to 1000.
 nmap -p- target_ip_address: Scan all ports (1-65535).
