@@ -1,5 +1,39 @@
-## Apache server:
+# NMAP:
 
+# Host Discovery
+
+nmap -sP -PE -PP -PA -PU target_ip_address (or nmap -sn -PE -sM -sO target_ip_address): Perform a ping scan (ICMP) to identify live hosts, followed by TCP SYN, UDP, and ICMP echo requests.
+nmap -n -sL -iL target_ip_address: List hosts in a file (-iL) or specify a network (-n) and perform a scan.
+Port Scanning
+
+nmap -p 1-1000 target_ip_address: Scan ports 1 to 1000.
+nmap -p- target_ip_address: Scan all ports (1-65535).
+nmap -sT -p [port list] target_ip_address: Perform a TCP SYN scan on specific ports.
+nmap -sU -p [port list] target_ip_address: Perform a UDP scan on specific ports.
+# OS Detection and Version
+
+nmap -O target_ip_address: Perform OS detection and version scan.
+nmap -sV target_ip_address: Perform version scan for services.
+Firewall and IDS Evasion
+
+nmap -f -T3 -D 192.168.1.101,192.168.1.102 target_ip_address: Use fragmentation (-f) and parallel processing (-D) to evade firewalls and IDS systems.
+Scripting and Customization
+
+nmap -script=<script_name> target_ip_address: Run a custom NSE (Nmap Scripting Engine) script.
+nmap --script-args=<arguments> target_ip_address: Pass arguments to NSE scripts.
+ # Additional Flags and Options
+
+nmap -Pn: Disable ping scanning.
+nmap --data-length 200: Set the maximum packet size.
+nmap --scan-delay 1d: Set the delay between scan packets.
+nmap --mac-parallelism 1: Specify the number of parallel MAC address scans.
+Real-World Examples
+
+nmap -A -T3 -sT -p 80,443 target_ip_address: Perform a comprehensive scan, including OS detection, version scan, and TCP SYN scan on ports 80 and 443.
+nmap -sn -PU -p 22 target_ip_address: Perform a UDP scan on port 22 and list hosts in a file (-sn).
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Apache server:
 1. sudo systemctl start apache2
 2. sudo systemctl stop apache2
 3. sudo systemctl restart apache2
