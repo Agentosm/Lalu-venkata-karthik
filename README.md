@@ -145,11 +145,11 @@ find /var/www/html -type f -name "*.php" -exec grep -l 'username' {} + | xargs g
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # John The Ripper (basic Format)
-john -w=<wordlist> hash.txt
-john --format=raw-md5 --wordlist=<wordlist> <hash_file>
-john --format=bcrypt --wordlist=<wordlist> <hash_file>
-john --format=raw-sha1 --wordlist=<wordlist> <hash_file>
-john --format=raw-sha256 --wordlist=<wordlist> <hash_file>
+1. john -w=<wordlist> hash.txt
+2. john --format=raw-md5 --wordlist=<wordlist> <hash_file>
+3. john --format=bcrypt --wordlist=<wordlist> <hash_file>
+4. john --format=raw-sha1 --wordlist=<wordlist> <hash_file>
+5. john --format=raw-sha256 --wordlist=<wordlist> <hash_file>
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  # hashcat (basic format)
