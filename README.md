@@ -121,11 +121,11 @@ usrname  ALL=(ALL:ALL) ALL
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Stabilizing the reverse shell:
-  script /dev/null -c /bin/bash
-   CTRL + Z
-   stty raw -echo; fg
-   Then press Enter twice, and then enter:
-    export TERM=xterm
+  1. script /dev/null -c /bin/bash
+   2. CTRL + Z
+   3. stty raw -echo; fg
+   4. Then press Enter twice, and then enter:
+   5. export TERM=xterm
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
  # Converting ova to vmdk and other extensions:
